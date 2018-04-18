@@ -58,6 +58,13 @@ while True:
 			l.hue = 47125
 			l.saturation = 253
 		print("\nLights set to BLUE")
+	if usercmd == 'green':
+		lights = b.lights[0:4]
+		for l in lights:
+			l.xy = [0.4084, 0.5168]
+			l.hue = 25653
+			l.saturation = 254
+		print("\nLights set to GREEN")
 
 
 print('\nComplete!\n')
