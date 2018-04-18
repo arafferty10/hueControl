@@ -34,9 +34,9 @@ l3 = b.lights[2]
 l4 = b.lights[3]
 
 #Change colors
-l1.xy = [0.6099, 0.2867]
-l1.hue = 63206
-l1.saturation = 253
+# l1.xy = [0.6099, 0.2867]
+# l1.hue = 63206
+# l1.saturation = 253
 
 #Print light info
 print(l1.name)

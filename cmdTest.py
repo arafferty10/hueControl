@@ -58,6 +58,7 @@ while True:
 			l.hue = 47125
 			l.saturation = 253
 		print("\nLights set to BLUE")
+
 	if usercmd == 'green':
 		lights = b.lights[0:4]
 		for l in lights:
@@ -65,6 +66,28 @@ while True:
 			l.hue = 25653
 			l.saturation = 254
 		print("\nLights set to GREEN")
+	if usercmd == 'bitchin':
+		l1 = b.lights[0]
+		l2 = b.lights[1]
+		l3 = b.lights[2]
+		l4 = b.lights[3]
+
+		l1.xy = [0.5641, 0.4024]
+		l1.hue = 63206
+		l1.saturation = 253
+
+		l2.xy = [0.484, 0.2168]
+		l2.hue = 58621
+		l2.saturation = 253
+
+		l3.xy = [0.6255, 0.3578]
+		l3.hue = 4663
+		l3.saturation = 253
+
+		l4.xy = [0.1684, 0.0417]
+		l4.hue = 47126
+		l4.saturation = 253
+		print("\nLights set to BITCHIN")
 
 
 print('\nComplete!\n')
