@@ -6,7 +6,10 @@
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>BEGIN SETUP>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 from phue import Bridge
 
+#Dependancies for LEDs
 import time
+from neopixel import *
+import argparse
 
 #Library to beautify JSON data
 import pprint

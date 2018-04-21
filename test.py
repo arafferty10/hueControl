@@ -3,6 +3,9 @@
 # Spring 2018
 
 #!/usr/bin/python
+
+#API DEBUG TOOL: http://<bridge ip address>/debug/clip.html
+
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>BEGIN SETUP>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 from phue import Bridge
 
