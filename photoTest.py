@@ -131,11 +131,11 @@ strip.begin()
 while True:
     print RCtime(19)
 
-    if RCtime(19) < 10000:
+    if RCtime(19) < 500:
         colorWipe(strip, Color(0, 0, 255))
         print RCtime(19)
 
-    if RCtime(19) > 22000:
+    if RCtime(19) > 4500:
         colorWipe(strip, Color(0, 255, 0))  # Red wipe
         print RCtime(19)
 
