@@ -131,17 +131,21 @@ strip.begin()
 while True:
     print RCtime(19)
 
-	if RCtime(19) < 10000:
-        rainbowCycle(strip)
+    if RCtime(19) < 10000:
+        colorWipe(strip, Color(0, 0, 255))
+        print RCtime(19)
 
-    if RCtime(19) > 60000:
-        theaterChase(strip, Color(  0,   0, 127))  # Blue theater chase
+    if RCtime(19) > 22000:
+        colorWipe(strip, Color(0, 255, 0))  # Red wipe
+        print RCtime(19)
 
     else:
-        colorWipe(strip, Color(255, 0, 0))  # Red wipe
+        colorWipe(strip, Color(255, 0, 0))  # Green wipe
+        print RCtime(19)
 
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>END LIGHT COMMANDS>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
 print('\nComplete!\n')
+
