@@ -26,7 +26,7 @@ b.connect()
 # Turn group 1 on
 b.set_group(1, 'on', True)
 
-#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
 #Set lights to variables
 l1 = b.lights[0]
 l2 = b.lights[1]

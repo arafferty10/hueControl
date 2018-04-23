@@ -7,6 +7,8 @@
 from phue import Bridge
 
 import time
+from neopixel import *
+import argparse
 
 #Library to beautify JSON data
 import pprint
@@ -18,10 +20,13 @@ logging.basicConfig()
 import random
 #assign the bridge to value b
 b = Bridge('10.0.0.79')
+
+b.connect
+
 print "\nBridge found...\n"
 
 # LED strip configuration:
-LED_COUNT      = 16      # Number of LED pixels.
+LED_COUNT      = 60      # Number of LED pixels.
 LED_PIN        = 18      # GPIO pin connected to the pixels (18 uses PWM!).
 #LED_PIN        = 10      # GPIO pin connected to the pixels (10 uses SPI /dev/spidev0.0).
 LED_FREQ_HZ    = 800000  # LED signal frequency in hertz (usually 800khz)
@@ -96,6 +101,10 @@ def theaterChaseRainbow(strip, wait_ms=50):
                 strip.setPixelColor(i+q, 0)
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>END LED FUNCTIONS>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+                
+strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL)
+    # Intialize the library (must be called once before other functions).
+strip.begin()
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>LIGHT COMMANDS>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 while True:
@@ -106,12 +115,13 @@ while True:
 		print usercmd
 	if usercmd == 'red':
 		lights = b.lights[0:4]
+                colorWipe(strip, Color(0, 255, 0))# Red wipe GRBW
 		# Loop through given lights
-		for l in lights:
+                for l in lights:
 			#Change colors
-			l.xy = [0.6099, 0.2867]
-			l.hue = 63206
-			l.saturation = 253
+                    l.xy = [0.6099, 0.2867]
+                    l.hue = 63206
+                    l.saturation = 253
 
 			#Print light info
 			# print("\n" + l.name)
@@ -121,22 +131,25 @@ while True:
 		print("\nLights set to RED")
 	if usercmd == 'blue':
 		#Get lights 0 through 4
-		lights = b.lights[0:4]
+	    lights = b.lights[0:4]
+            colorWipe(strip, Color(0, 0, 255))  # Blue wipe GRBW
 		# Loop through given lights
-		for l in lights:
+	    for l in lights:
 			#Change colors
-			l.xy = [0.1684, 0.0416]
-			l.hue = 47125
-			l.saturation = 253
-		print("\nLights set to BLUE")
+		    l.xy = [0.1684, 0.0416]
+		    l.hue = 47125
+		    l.saturation = 253
+	    print("\nLights set to BLUE")
 
 	if usercmd == 'green':
-		lights = b.lights[0:4]
-		for l in lights:
-			l.xy = [0.4084, 0.5168]
-			l.hue = 25653
-			l.saturation = 254
-		print("\nLights set to GREEN")
+	    lights = b.lights[0:4]
+            colorWipe(strip, Color(255, 0, 0))  # Green wipe
+            for l in lights:
+		l.xy = [0.4084, 0.5168]
+		l.hue = 25653
+		l.saturation = 254
+	    print("\nLights set to GREEN")
+	    
 	if usercmd == 'bitchin':
 		l1 = b.lights[0]
 		l2 = b.lights[1]
