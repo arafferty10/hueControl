@@ -134,36 +134,44 @@ while True:
 
     if RCtime(19) > RCtime(20) and RCtime(21) and RCtime(22) and RCtime(23) and RCtime(24) and RCtime(25) and RCtime(26):
         colorWipe(strip, Color(0, 0, 255))
+        print "\nSensor 1 ACTIVATED"
 
     if RCtime(20) > RCtime(19) and RCtime(21) and RCtime(22) and RCtime(23) and RCtime(24) and RCtime(25) and RCtime(26):
         colorWipe(strip, Color(0, 255, 0))  # Red wipe
+        print "\nSensor 2 ACTIVATED"
 
     if RCtime(21) > RCtime(19) and RCtime(20) and RCtime(22) and RCtime(23) and RCtime(24) and RCtime(25) and RCtime(26):
         colorWipe(strip, Color(100, 100, 100))
+        print "\nSensor 3 ACTIVATED"
 
     if RCtime(22) > RCtime(19) and RCtime(20) and RCtime(21) and RCtime(23) and RCtime(24) and RCtime(25) and RCtime(26):
         colorWipe(strip, Color(50, 155, 200))
+        print "\nSensor 4 ACTIVATED"
 
     if RCtime(23) > RCtime(19) and RCtime(20) and RCtime(21) and RCtime(22) and RCtime(24) and RCtime(25) and RCtime(26):
         colorWipe(strip, Color(200, 55, 100))
+        print "\nSensor 5 ACTIVATED"
 
     if RCtime(24) > RCtime(19) and RCtime(20) and RCtime(21) and RCtime(22) and RCtime(23) and RCtime(25) and RCtime(26):
         colorWipe(strip, Color(150, 20, 160))
+        print "\nSensor 6 ACTIVATED"
 
     if RCtime(25) > RCtime(19) and RCtime(20) and RCtime(21) and RCtime(22) and RCtime(23) and RCtime(24) and RCtime(26):
         colorWipe(strip, Color(10, 190, 20))
+        print "\nSensor 7 ACTIVATED"
 
     if RCtime(26) > RCtime(19) and RCtime(20) and RCtime(21) and RCtime(22) and RCtime(23) and RCtime(24) and RCtime(25):
         colorWipe(strip, Color(75, 90, 40))
+        print "\nSensor 8 ACTIVATED"
 
-    print "Sensor 1: {}".format(RCtime(19))   # Read RC timing using pin #18
-    print "Sensor 2: {}".format(RCtime(20))
-    print "Sensor 3: {}".format(RCtime(21))
-    print "Sensor 4: {}".format(RCtime(22))
-    print "Sensor 5: {}".format(RCtime(23))   # Read RC timing using pin #18
-    print "Sensor 6: {}".format(RCtime(24))
-    print "Sensor 7: {}".format(RCtime(25))
-    print "Sensor 8: {}\n".format(RCtime(26))
+    # print "Sensor 1: {}".format(RCtime(19))   # Read RC timing using pin #18
+    # print "Sensor 2: {}".format(RCtime(20))
+    # print "Sensor 3: {}".format(RCtime(21))
+    # print "Sensor 4: {}".format(RCtime(22))
+    # print "Sensor 5: {}".format(RCtime(23))   # Read RC timing using pin #18
+    # print "Sensor 6: {}".format(RCtime(24))
+    # print "Sensor 7: {}".format(RCtime(25))
+    # print "Sensor 8: {}\n".format(RCtime(26))
 
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>END LIGHT COMMANDS>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
