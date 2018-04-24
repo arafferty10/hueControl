@@ -23,4 +23,6 @@ def RCtime (RCpin):
 
 while True:
         print "Sensor 1: {}".format(RCtime(19))   # Read RC timing using pin #18
-        print "Sensor 2: {}".format(RCtime(22))
+        print "Sensor 2: {}".format(RCtime(20))
+        print "Sensor 3: {}".format(RCtime(21))
+        print "Sensor 4: {}".format(RCtime(22))
