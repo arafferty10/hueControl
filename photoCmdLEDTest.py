@@ -156,8 +156,6 @@ while True:
     if RCtime(26) > RCtime(19) and RCtime(20) and RCtime(21) and RCtime(22) and RCtime(23) and RCtime(24) and RCtime(25):
         colorWipe(strip, Color(75, 90, 40))
 
-    else:
-        colorWipe(strip, Color(255, 0, 0))  # Green wipe
 
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>END LIGHT COMMANDS>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
