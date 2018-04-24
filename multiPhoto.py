@@ -29,4 +29,4 @@ while True:
         print "Sensor 5: {}".format(RCtime(23))   # Read RC timing using pin #18
         print "Sensor 6: {}".format(RCtime(24))
         print "Sensor 7: {}".format(RCtime(25))
-        print "Sensor 8: {}/n".format(RCtime(26))
+        print "Sensor 8: {}\n".format(RCtime(26))
