@@ -132,35 +132,35 @@ strip.begin()
 while True:
     # print RCtime(19)
 
-    if RCtime(19) > RCtime(20) and RCtime(21) and RCtime(22) and RCtime(23) and RCtime(24) and RCtime(25) and RCtime(26):
+    if RCtime(19) > (RCtime(20) and RCtime(21) and RCtime(22) and RCtime(23) and RCtime(24) and RCtime(25) and RCtime(26)):
         colorWipe(strip, Color(0, 0, 255))
         print "\nSensor 1 ACTIVATED"
 
-    if RCtime(20) > RCtime(19) and RCtime(21) and RCtime(22) and RCtime(23) and RCtime(24) and RCtime(25) and RCtime(26):
+    if RCtime(20) > (RCtime(19) and RCtime(21) and RCtime(22) and RCtime(23) and RCtime(24) and RCtime(25) and RCtime(26)):
         colorWipe(strip, Color(0, 255, 0))  # Red wipe
         print "\nSensor 2 ACTIVATED"
 
-    if RCtime(21) > RCtime(19) and RCtime(20) and RCtime(22) and RCtime(23) and RCtime(24) and RCtime(25) and RCtime(26):
+    if RCtime(21) > (RCtime(19) and RCtime(20) and RCtime(22) and RCtime(23) and RCtime(24) and RCtime(25) and RCtime(26)):
         colorWipe(strip, Color(100, 100, 100))
         print "\nSensor 3 ACTIVATED"
 
-    if RCtime(22) > RCtime(19) and RCtime(20) and RCtime(21) and RCtime(23) and RCtime(24) and RCtime(25) and RCtime(26):
+    if RCtime(22) > (RCtime(19) and RCtime(20) and RCtime(21) and RCtime(23) and RCtime(24) and RCtime(25) and RCtime(26)):
         colorWipe(strip, Color(50, 155, 200))
         print "\nSensor 4 ACTIVATED"
 
-    if RCtime(23) > RCtime(19) and RCtime(20) and RCtime(21) and RCtime(22) and RCtime(24) and RCtime(25) and RCtime(26):
+    if RCtime(23) > (RCtime(19) and RCtime(20) and RCtime(21) and RCtime(22) and RCtime(24) and RCtime(25) and RCtime(26)):
         colorWipe(strip, Color(200, 55, 100))
         print "\nSensor 5 ACTIVATED"
 
-    if RCtime(24) > RCtime(19) and RCtime(20) and RCtime(21) and RCtime(22) and RCtime(23) and RCtime(25) and RCtime(26):
+    if RCtime(24) > (RCtime(19) and RCtime(20) and RCtime(21) and RCtime(22) and RCtime(23) and RCtime(25) and RCtime(26)):
         colorWipe(strip, Color(150, 20, 160))
         print "\nSensor 6 ACTIVATED"
 
-    if RCtime(25) > RCtime(19) and RCtime(20) and RCtime(21) and RCtime(22) and RCtime(23) and RCtime(24) and RCtime(26):
+    if RCtime(25) > (RCtime(19) and RCtime(20) and RCtime(21) and RCtime(22) and RCtime(23) and RCtime(24) and RCtime(26)):
         colorWipe(strip, Color(10, 190, 20))
         print "\nSensor 7 ACTIVATED"
 
-    if RCtime(26) > RCtime(19) and RCtime(20) and RCtime(21) and RCtime(22) and RCtime(23) and RCtime(24) and RCtime(25):
+    if RCtime(26) > (RCtime(19) and RCtime(20) and RCtime(21) and RCtime(22) and RCtime(23) and RCtime(24) and RCtime(25)):
         colorWipe(strip, Color(75, 90, 40))
         print "\nSensor 8 ACTIVATED"
 
