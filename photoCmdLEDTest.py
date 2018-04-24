@@ -4,7 +4,7 @@
 
 #!/usr/bin/python
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>BEGIN SETUP>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-from phue import Bridge
+# from phue import Bridge
 
 import time
 from neopixel import *
@@ -25,11 +25,12 @@ logging.basicConfig()
 #Random Library
 import random
 #assign the bridge to value b
-b = Bridge('10.0.0.79')
+# b = Bridge('10.0.0.79')
+#
+# b.connect
 
-b.connect
-
-print "\nBridge found...\n"
+# print "\nBridge found...\n"
+print "\nBeginning Test...\n"
 
 # LED strip configuration:
 LED_COUNT      = 60      # Number of LED pixels.
@@ -42,11 +43,11 @@ LED_INVERT     = False   # True to invert the signal (when using NPN transistor 
 LED_CHANNEL    = 0       # set to '1' for GPIOs 13, 19, 41, 45 or 53
 
 # If the app is not registered and the button is not pressed, press the button and call connect() (this only needs to be run a single time)
-b.connect()
+# b.connect()
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>END OF SETUP>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 # Turn group 1 on
-b.set_group(1, 'on', True)
+# b.set_group(1, 'on', True)
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>PHOTOCELL SERIAL READ CODE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 def RCtime (RCpin):
@@ -129,7 +130,7 @@ strip.begin()
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>LIGHT COMMANDS>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 while True:
-    print RCtime(19)
+    # print RCtime(19)
 
     if RCtime(19) > RCtime(20) and RCtime(21) and RCtime(22) and RCtime(23) and RCtime(24) and RCtime(25) and RCtime(26):
         colorWipe(strip, Color(0, 0, 255))
