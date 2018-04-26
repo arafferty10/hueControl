@@ -23,9 +23,9 @@ def RCtime (RCpin):
         return reading
 
 while True:
-        vals = np.array([])
-        vals.append(RCtime(19))
-        print vals
+        photoVals = np.array([])
+        photoValsvals= np.append(photoVals, RCtime(19))
+        print photoVals
 
         # print "Sensor 1: {}".format(RCtime(19))   # Read RC timing using pin #18
         # print "Sensor 2: {}".format(RCtime(20))
