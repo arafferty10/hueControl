@@ -25,6 +25,6 @@ def RCtime (RCpin):
 while True:
         photoVals = np.array([])
         sensor1 = RCtime(19)
-        print sensor1
-        photoValsvals = np.append(photoVals, sensor1)
+        # print sensor1
+        photoVals = np.append(photoVals, sensor1)
         print photoVals
