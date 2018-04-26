@@ -5,6 +5,7 @@
 # are not fast enough!
 
 import RPi.GPIO as GPIO, time, os
+import numpy as np
 
 DEBUG = 1
 GPIO.setmode(GPIO.BCM)
@@ -22,11 +23,15 @@ def RCtime (RCpin):
         return reading
 
 while True:
-        print "Sensor 1: {}".format(RCtime(19))   # Read RC timing using pin #18
-        print "Sensor 2: {}".format(RCtime(20))
-        print "Sensor 3: {}".format(RCtime(21))
-        print "Sensor 4: {}".format(RCtime(22))
-        print "Sensor 5: {}".format(RCtime(23))   # Read RC timing using pin #18
-        print "Sensor 6: {}".format(RCtime(24))
-        print "Sensor 7: {}".format(RCtime(25))
-        print "Sensor 8: {}\n".format(RCtime(26))
+        vals = np.array([])
+        vals.append(RCtime(19))
+        print vals
+
+        # print "Sensor 1: {}".format(RCtime(19))   # Read RC timing using pin #18
+        # print "Sensor 2: {}".format(RCtime(20))
+        # print "Sensor 3: {}".format(RCtime(21))
+        # print "Sensor 4: {}".format(RCtime(22))
+        # print "Sensor 5: {}".format(RCtime(23))   # Read RC timing using pin #18
+        # print "Sensor 6: {}".format(RCtime(24))
+        # print "Sensor 7: {}".format(RCtime(25))
+        # print "Sensor 8: {}\n".format(RCtime(26))
