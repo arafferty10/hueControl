@@ -42,4 +42,5 @@ while True:
         photoVals = np.append(photoVals, sensor8)
         # print sensor1
         print photoVals
-        print "Avgerage Photocell Value = {}".format(np.mean(photoVals))
+        print "Average Photocell Value = {}".format(np.mean(photoVals))
+        print "Standard Deviation = {}".format(np.std(photoVals))
