@@ -133,7 +133,7 @@ while True:
     # print RCtime(19)
     # Try creating a variable of the average light and then check to see if a sensor goes above that value to trigger
     # or put into an array and then find the max of the array
-
+    
     if RCtime(19) > RCtime(20) and RCtime(21) and RCtime(22) and RCtime(23) and RCtime(24) and RCtime(25) and RCtime(26):
         colorWipe(strip, Color(0, 0, 255))
         print "\nSensor 1 ACTIVATED"
