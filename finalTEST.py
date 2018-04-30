@@ -151,7 +151,8 @@ while True:
     #Compare photocell values to max value and trigger if they match
     if sensor1 == np.max(photoVals):
         #Blue lights
-        print "SENSOR 1 ACTIVATED"
+        print "\nSENSOR 1 ACTIVATED"
+        print "BLUE"
         #LED Activation
         colorWipe(strip, Color(0, 0, 255))
         #Hue Lights Activation
@@ -165,7 +166,8 @@ while True:
 
     if sensor2 == np.max(photoVals):
         #Red Lights
-        print "SENSOR 2 ACTIVATED"
+        print "\nSENSOR 2 ACTIVATED"
+        print "RED"
         #LED Activation
         colorWipe(strip, Color(0, 255, 0))  # Red wipe
         #Hue Lights Activation
@@ -179,7 +181,8 @@ while True:
 
     if sensor3 == np.max(photoVals):
         #Green Lights
-        print "SENSOR 3 ACTIVATED"
+        print "\nSENSOR 3 ACTIVATED"
+        print "GREEN"
         #LED Activation
         colorWipe(strip, Color(255, 0, 0))
         #Hue Activation
@@ -192,7 +195,8 @@ while True:
 
     if sensor4 == np.max(photoVals):
         #White Lights
-        print "SENSOR 4 ACTIVATED"
+        print "\nSENSOR 4 ACTIVATED"
+        print "WHITE"
         #LED Activation
         colorWipe(strip, Color(255, 255, 255))
         #Hue Activation
@@ -205,7 +209,8 @@ while True:
 
     if sensor5 == np.max(photoVals):
         #Summa Time Lights
-        print "SENSOR 5 ACTIVATED"
+        print "\nSENSOR 5 ACTIVATED"
+        print "SUMMA TIME"
         #LED Activation
         colorWipe(strip, Color(90, 190, 20))
         #Hue Activation
@@ -235,7 +240,8 @@ while True:
 
     if sensor6 == np.max(photoVals):
         #Red Rocks Sleepytime Lights
-        print "SENSOR 6 ACTIVATED"
+        print "\nSENSOR 6 ACTIVATED"
+        print "RED ROCKS SLEEPY"
         #LED Activation
         colorWipe(strip, Color(10, 120, 80))
         #Hue Activation
@@ -264,7 +270,8 @@ while True:
 
     if sensor7 == np.max(photoVals):
         #Bitchin Lights
-        print "SENSOR 7 ACTIVATED"
+        print "\nSENSOR 7 ACTIVATED"
+        print "BITCHIN"
         #LED Activation
         colorWipe(strip, Color(10, 190, 20))
         #Hue Lights Activation
@@ -292,7 +299,8 @@ while True:
 
     if sensor8 == np.max(photoVals):
         #Lights OFF
-        print "SENSOR 8 ACTIVATED"
+        print "\nSENSOR 8 ACTIVATED"
+        print "OFF"
         #LED Activation
         colorWipe(strip, Color(0, 0, 0))
         #Hue Activation
