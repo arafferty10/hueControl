@@ -130,13 +130,21 @@ while True:
             colorWipe(strip, Color(0, 0, 0))
 	    print("\nLights set to OFF")
 
-    if usercmd == 'white':
+        if usercmd == 'white':
             colorWipe(strip, Color(255, 255, 255))  # Green wipe
 	    print("\nLights set to WHITE")
 
 	if usercmd == 'bitchin':
 	    colorWipe(strip, Color(10, 190, 20))
 	    print("\nLights set to BITCHIN")
+	    
+	if usercmd == 'summa':
+	    colorWipe(strip, Color(90, 190, 20))
+	    print("\nLights set to SUMMA")
+	    
+	if usercmd == 'rr':
+	    colorWipe(strip, Color(10, 120, 80))
+	    print("\nLights set to RRSLEEPYTIME")
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>END LIGHT COMMANDS>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
