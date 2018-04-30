@@ -115,20 +115,20 @@ while True:
 		print usercmd
 
 	if usercmd == 'red':
-        colorWipe(strip, Color(0, 255, 0))# Red wipe GRBW
-		print("\nLights set to RED")
+            colorWipe(strip, Color(0, 255, 0))# Red wipe GRBW
+	    print("\nLights set to RED")
 
 	if usercmd == 'blue':
-        colorWipe(strip, Color(0, 0, 255))  # Blue wipe GRBW
+            colorWipe(strip, Color(0, 0, 255))  # Blue wipe GRBW
 	    print("\nLights set to BLUE")
 
 	if usercmd == 'green':
-        colorWipe(strip, Color(255, 0, 0))  # Green wipe
+            colorWipe(strip, Color(255, 0, 0))  # Green wipe
 	    print("\nLights set to GREEN")
 
 	if usercmd == 'bitchin':
-		colorWipe(strip, Color(10, 190, 20))
-		print("\nLights set to BITCHIN")
+	    colorWipe(strip, Color(10, 190, 20))
+	    print("\nLights set to BITCHIN")
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>END LIGHT COMMANDS>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
