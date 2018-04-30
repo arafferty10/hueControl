@@ -181,7 +181,7 @@ while True:
         #Green Lights
         print "SENSOR 3 ACTIVATED"
         #LED Activation
-        colorWipe(strip, Color(100, 100, 100))
+        colorWipe(strip, Color(255, 0, 0))
         #Hue Activation
         b.set_group(1, 'on', True)
         lights = b.lights[0:4]
@@ -211,25 +211,25 @@ while True:
         #Hue Activation
         b.set_group(1, 'on', True)
         l1 = b.lights[0]
-		l2 = b.lights[1]
-		l3 = b.lights[2]
-		l4 = b.lights[3]
+	l2 = b.lights[1]
+	l3 = b.lights[2]
+	l4 = b.lights[3]
 
-		l1.xy = [0.6134, 0.3674]
-		l1.hue = 5933
-		l1.saturation = 254
+	l1.xy = [0.6134, 0.3674]
+	l1.hue = 5933
+	l1.saturation = 254
 
-		l2.xy = [0.409, 0.518]
-		l2.hue = 25599
-		l2.saturation = 254
+	l2.xy = [0.409, 0.518]
+	l2.hue = 25599
+	l2.saturation = 254
 
-		l3.xy = [0.3225, 0.2767]
-		l3.hue = 48089
-		l3.saturation = 79
+	l3.xy = [0.3225, 0.2767]
+	l3.hue = 48089
+	l3.saturation = 79
 
-		l4.xy = [0.3471, 0.3957]
-		l4.hue = 31101
-		l4.saturation = 254
+	l4.xy = [0.3471, 0.3957]
+	l4.hue = 31101
+	l4.saturation = 254
 
 
 
@@ -241,25 +241,25 @@ while True:
         #Hue Activation
         b.set_group(1, 'on', True)
         l1 = b.lights[0]
-		l2 = b.lights[1]
-		l3 = b.lights[2]
-		l4 = b.lights[3]
+	l2 = b.lights[1]
+	l3 = b.lights[2]
+	l4 = b.lights[3]
 
-		l1.xy = [0.5555, 0.3141]
-		l1.hue = 63522
-		l1.saturation = 186
+	l1.xy = [0.5555, 0.3141]
+	l1.hue = 63522
+	l1.saturation = 186
 
-		l2.xy = [0.6558, 0.3234]
-		l2.hue = 65424
-		l2.saturation = 240
+	l2.xy = [0.6558, 0.3234]
+	l2.hue = 65424
+	l2.saturation = 240
 
-		l3.xy = [0.6017, 0.3747]
-		l3.hue = 6881
-		l3.saturation = 252
+	l3.xy = [0.6017, 0.3747]
+	l3.hue = 6881
+	l3.saturation = 252
 
-		l4.xy = [0.6736, 0.3221]
-		l4.hue = 65528
-		l4.saturation = 253
+	l4.xy = [0.6736, 0.3221]
+	l4.hue = 65528
+	l4.saturation = 253
 
 
     if sensor7 == np.max(photoVals):
@@ -270,25 +270,25 @@ while True:
         #Hue Lights Activation
         b.set_group(1, 'on', True)
         l1 = b.lights[0]
-		l2 = b.lights[1]
-		l3 = b.lights[2]
-		l4 = b.lights[3]
+	l2 = b.lights[1]
+	l3 = b.lights[2]
+	l4 = b.lights[3]
 
-		l1.xy = [0.5641, 0.4024]
-		l1.hue = 63206
-		l1.saturation = 253
+	l1.xy = [0.5641, 0.4024]
+	l1.hue = 63206
+	l1.saturation = 253
 
-		l2.xy = [0.484, 0.2168]
-		l2.hue = 58621
-		l2.saturation = 253
+	l2.xy = [0.484, 0.2168]
+	l2.hue = 58621
+	l2.saturation = 253
 
-		l3.xy = [0.6255, 0.3578]
-		l3.hue = 4663
-		l3.saturation = 253
+	l3.xy = [0.6255, 0.3578]
+	l3.hue = 4663
+	l3.saturation = 253
 
-		l4.xy = [0.1684, 0.0417]
-		l4.hue = 47126
-		l4.saturation = 253
+	l4.xy = [0.1684, 0.0417]
+	l4.hue = 47126
+	l4.saturation = 253
 
     if sensor8 == np.max(photoVals):
         #Lights OFF
