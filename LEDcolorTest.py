@@ -126,9 +126,9 @@ while True:
             colorWipe(strip, Color(255, 0, 0))  # Green wipe
 	    print("\nLights set to GREEN")
 
-    if usercmd == 'white':
+        if usercmd == 'white':
             colorWipe(strip, Color(0, 0, 0))  
-	    print("\nLights set to WHITE")
+	    print("\nLights set to OFF")
 
 	if usercmd == 'bitchin':
 	    colorWipe(strip, Color(10, 190, 20))
