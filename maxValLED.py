@@ -12,6 +12,7 @@ import argparse
 
 #Import and setup for Photocells
 import RPi.GPIO as GPIO, time, os
+import numpy as np
 
 DEBUG = 1
 GPIO.setmode(GPIO.BCM)
@@ -180,7 +181,7 @@ while True:
     if sensor8 == np.max(photoVals):
         print "SENSOR 8 ACTIVATED"
         colorWipe(strip, Color(75, 90, 40))
-    
+
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>END LIGHT COMMANDS>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
