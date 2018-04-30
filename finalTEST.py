@@ -181,7 +181,7 @@ while True:
         #Green Lights
         print "SENSOR 3 ACTIVATED"
         #LED Activation
-        colorWipe(strip, Color(100, 100, 100))
+        colorWipe(strip, Color(255, 100, 100))
         #Hue Activation
         b.set_group(1, 'on', True)
         lights = b.lights[0:4]
