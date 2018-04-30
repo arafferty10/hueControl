@@ -43,4 +43,5 @@ while True:
         # print sensor1
         print photoVals
         print "Average Photocell Value = {}".format(np.mean(photoVals))
-        print "Standard Deviation = {}\n".format(np.std(photoVals))
+        print "Max Photocell Value = {}".format(np.max(photoVals))
+        # print "Standard Deviation = {}\n".format(np.std(photoVals))
