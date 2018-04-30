@@ -46,7 +46,7 @@ LED_CHANNEL    = 0       # set to '1' for GPIOs 13, 19, 41, 45 or 53
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>END OF SETUP>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 # Turn group 1 on
-b.set_group(1, 'on', True)
+# b.set_group(1, 'on', True)
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>PHOTOCELL SERIAL READ CODE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 def RCtime (RCpin):
@@ -169,6 +169,7 @@ while True:
         #LED Activation
         colorWipe(strip, Color(0, 255, 0))  # Red wipe
         #Hue Lights Activation
+        b.set_group(1, 'on', True)
         lights = b.lights[0:4]
         for l in lights:
             #Change colors
@@ -182,6 +183,7 @@ while True:
         #LED Activation
         colorWipe(strip, Color(100, 100, 100))
         #Hue Activation
+        b.set_group(1, 'on', True)
         lights = b.lights[0:4]
         for l in lights:
             l.xy = [0.4084, 0.5168]
@@ -189,25 +191,84 @@ while True:
             l.saturation = 254
 
     if sensor4 == np.max(photoVals):
+        #White Lights
         print "SENSOR 4 ACTIVATED"
         #LED Activation
-        colorWipe(strip, Color(50, 155, 200))
+        colorWipe(strip, Color(255, 255, 255))
+        #Hue Activation
+        b.set_group(1, 'on', True)
+        lights = b.lights[0:4]
+        for l in lights:
+            l.xy = [0.457, 0.4098]
+            l.hue = 14974
+            l.saturation = 140
 
     if sensor5 == np.max(photoVals):
+        #Summa Time Lights
         print "SENSOR 5 ACTIVATED"
         #LED Activation
-        colorWipe(strip, Color(200, 55, 100))
+        colorWipe(strip, Color(90, 190, 20))
+        #Hue Activation
+        b.set_group(1, 'on', True)
+        l1 = b.lights[0]
+		l2 = b.lights[1]
+		l3 = b.lights[2]
+		l4 = b.lights[3]
+
+		l1.xy = [0.6134, 0.3674]
+		l1.hue = 5933
+		l1.saturation = 254
+
+		l2.xy = [0.409, 0.518]
+		l2.hue = 25599
+		l2.saturation = 254
+
+		l3.xy = [0.3225, 0.2767]
+		l3.hue = 48089
+		l3.saturation = 79
+
+		l4.xy = [0.3471, 0.3957]
+		l4.hue = 31101
+		l4.saturation = 254
+
+
 
     if sensor6 == np.max(photoVals):
+        #Red Rocks Sleepytime Lights
         print "SENSOR 6 ACTIVATED"
         #LED Activation
-        colorWipe(strip, Color(150, 20, 160))
+        colorWipe(strip, Color(10, 120, 80))
+        #Hue Activation
+        b.set_group(1, 'on', True)
+        l1 = b.lights[0]
+		l2 = b.lights[1]
+		l3 = b.lights[2]
+		l4 = b.lights[3]
+
+		l1.xy = [0.5555, 0.3141]
+		l1.hue = 63522
+		l1.saturation = 186
+
+		l2.xy = [0.6558, 0.3234]
+		l2.hue = 65424
+		l2.saturation = 240
+
+		l3.xy = [0.6017, 0.3747]
+		l3.hue = 6881
+		l3.saturation = 252
+
+		l4.xy = [0.6736, 0.3221]
+		l4.hue = 65528
+		l4.saturation = 253
+
 
     if sensor7 == np.max(photoVals):
+        #Bitchin Lights
         print "SENSOR 7 ACTIVATED"
         #LED Activation
         colorWipe(strip, Color(10, 190, 20))
         #Hue Lights Activation
+        b.set_group(1, 'on', True)
         l1 = b.lights[0]
 		l2 = b.lights[1]
 		l3 = b.lights[2]
@@ -230,9 +291,12 @@ while True:
 		l4.saturation = 253
 
     if sensor8 == np.max(photoVals):
+        #Lights OFF
         print "SENSOR 8 ACTIVATED"
         #LED Activation
-        colorWipe(strip, Color(75, 90, 40))
+        colorWipe(strip, Color(0, 0, 0))
+        #Hue Activation
+        b.set_group(1, 'on', False)
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>END LIGHT COMMANDS>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
