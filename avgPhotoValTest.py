@@ -40,6 +40,23 @@ while True:
         photoVals = np.append(photoVals, sensor7)
         sensor8 = RCtime(26)
         photoVals = np.append(photoVals, sensor8)
+
+        if sensor1 == np.max(photoVals):
+            print "SENSOR 1 ACTIVATED"
+        if sensor2 == np.max(photoVals):
+            print "SENSOR 2 ACTIVATED"
+        if sensor3 == np.max(photoVals):
+            print "SENSOR 3 ACTIVATED"
+        if sensor4 == np.max(photoVals):
+            print "SENSOR 4 ACTIVATED"
+        if sensor5 == np.max(photoVals):
+            print "SENSOR 5 ACTIVATED"
+        if sensor6 == np.max(photoVals):
+            print "SENSOR 6 ACTIVATED"
+        if sensor7 == np.max(photoVals):
+            print "SENSOR 7 ACTIVATED"
+        if sensor8 == np.max(photoVals):
+            print "SENSOR 8 ACTIVATED"
         # print sensor1
         print photoVals
         print "Average Photocell Value = {}".format(np.mean(photoVals))
