@@ -101,7 +101,7 @@ def theaterChaseRainbow(strip, wait_ms=50):
                 strip.setPixelColor(i+q, 0)
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>END LED FUNCTIONS>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-                
+
 strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL)
     # Intialize the library (must be called once before other functions).
 strip.begin()
@@ -118,7 +118,7 @@ while True:
                 colorWipe(strip, Color(0, 255, 0))# Red wipe GRBW
 		# Loop through given lights
                 for l in lights:
-			#Change colors
+			        #Change colors
                     l.xy = [0.6099, 0.2867]
                     l.hue = 63206
                     l.saturation = 253
@@ -149,7 +149,7 @@ while True:
 		l.hue = 25653
 		l.saturation = 254
 	    print("\nLights set to GREEN")
-	    
+
 	if usercmd == 'bitchin':
 		l1 = b.lights[0]
 		l2 = b.lights[1]

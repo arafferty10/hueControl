@@ -1,10 +1,10 @@
 # Aidan Rafferty
-# Phillips Hue Python Test with Photocell Commands 1
+# Phillips Hue Python FINAL Test Code before implementation
 # Spring 2018
 
 #!/usr/bin/python
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>BEGIN SETUP>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-# from phue import Bridge
+from phue import Bridge
 
 import time
 from neopixel import *
@@ -12,6 +12,7 @@ import argparse
 
 #Import and setup for Photocells
 import RPi.GPIO as GPIO, time, os
+import numpy as np
 
 DEBUG = 1
 GPIO.setmode(GPIO.BCM)
@@ -25,11 +26,11 @@ logging.basicConfig()
 #Random Library
 import random
 #assign the bridge to value b
-# b = Bridge('10.0.0.79')
-#
-# b.connect
+b = Bridge('10.0.0.79')
+#Connect to bridge
+b.connect
 
-# print "\nBridge found...\n"
+print "\nBridge found...\n"
 print "\nBeginning Test...\n"
 
 # LED strip configuration:
@@ -42,12 +43,10 @@ LED_BRIGHTNESS = 255     # Set to 0 for darkest and 255 for brightest
 LED_INVERT     = False   # True to invert the signal (when using NPN transistor level shift)
 LED_CHANNEL    = 0       # set to '1' for GPIOs 13, 19, 41, 45 or 53
 
-# If the app is not registered and the button is not pressed, press the button and call connect() (this only needs to be run a single time)
-# b.connect()
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>END OF SETUP>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 # Turn group 1 on
-# b.set_group(1, 'on', True)
+b.set_group(1, 'on', True)
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>PHOTOCELL SERIAL READ CODE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 def RCtime (RCpin):
@@ -130,51 +129,110 @@ strip.begin()
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>LIGHT COMMANDS>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 while True:
-    # print RCtime(19)
-    # Try creating a variable of the average light and then check to see if a sensor goes above that value to trigger
-    # or put into an array and then find the max of the array
+    #Create an array of photocell values
+    photoVals = np.array([])
+    sensor1 = RCtime(19)
+    photoVals = np.append(photoVals, sensor1)
+    sensor2 = RCtime(20)
+    photoVals = np.append(photoVals, sensor2)
+    sensor3 = RCtime(21)
+    photoVals = np.append(photoVals, sensor3)
+    sensor4 = RCtime(22)
+    photoVals = np.append(photoVals, sensor4)
+    sensor5 = RCtime(23)
+    photoVals = np.append(photoVals, sensor5)
+    sensor6 = RCtime(24)
+    photoVals = np.append(photoVals, sensor6)
+    sensor7 = RCtime(25)
+    photoVals = np.append(photoVals, sensor7)
+    sensor8 = RCtime(26)
+    photoVals = np.append(photoVals, sensor8)
 
-    if RCtime(19) > RCtime(20) and RCtime(21) and RCtime(22) and RCtime(23) and RCtime(24) and RCtime(25) and RCtime(26):
+    #Compare photocell values to max value and trigger if they match
+    if sensor1 == np.max(photoVals):
+        #Blue lights
+        print "SENSOR 1 ACTIVATED"
+        #LED Activation
         colorWipe(strip, Color(0, 0, 255))
-        print "\nSensor 1 ACTIVATED"
+        #Hue Lights Activation
+        lights = b.lights[0:4]
+        for l in lights:
+			#Change colors
+		    l.xy = [0.1684, 0.0416]
+		    l.hue = 47125
+		    l.saturation = 253
 
-    if RCtime(20) > RCtime(19) and RCtime(21) and RCtime(22) and RCtime(23) and RCtime(24) and RCtime(25) and RCtime(26):
+
+    if sensor2 == np.max(photoVals):
+        #Red Lights
+        print "SENSOR 2 ACTIVATED"
+        #LED Activation
         colorWipe(strip, Color(0, 255, 0))  # Red wipe
-        print "\nSensor 2 ACTIVATED"
+        #Hue Lights Activation
+        lights = b.lights[0:4]
+        for l in lights:
+            #Change colors
+            l.xy = [0.6099, 0.2867]
+            l.hue = 63206
+            l.saturation = 253
 
-    if RCtime(21) > RCtime(19) and RCtime(20) and RCtime(22) and RCtime(23) and RCtime(24) and RCtime(25) and RCtime(26):
+    if sensor3 == np.max(photoVals):
+        #Green Lights
+        print "SENSOR 3 ACTIVATED"
+        #LED Activation
         colorWipe(strip, Color(100, 100, 100))
-        print "\nSensor 3 ACTIVATED"
+        #Hue Activation
+        lights = b.lights[0:4]
+        for l in lights:
+            l.xy = [0.4084, 0.5168]
+            l.hue = 25653
+            l.saturation = 254
 
-    if RCtime(22) > RCtime(19) and RCtime(20) and RCtime(21) and RCtime(23) and RCtime(24) and RCtime(25) and RCtime(26):
+    if sensor4 == np.max(photoVals):
+        print "SENSOR 4 ACTIVATED"
+        #LED Activation
         colorWipe(strip, Color(50, 155, 200))
-        print "\nSensor 4 ACTIVATED"
 
-    if RCtime(23) > RCtime(19) and RCtime(20) and RCtime(21) and RCtime(22) and RCtime(24) and RCtime(25) and RCtime(26):
+    if sensor5 == np.max(photoVals):
+        print "SENSOR 5 ACTIVATED"
+        #LED Activation
         colorWipe(strip, Color(200, 55, 100))
-        print "\nSensor 5 ACTIVATED"
 
-    if RCtime(24) > RCtime(19) and RCtime(20) and RCtime(21) and RCtime(22) and RCtime(23) and RCtime(25) and RCtime(26):
+    if sensor6 == np.max(photoVals):
+        print "SENSOR 6 ACTIVATED"
+        #LED Activation
         colorWipe(strip, Color(150, 20, 160))
-        print "\nSensor 6 ACTIVATED"
 
-    if RCtime(25) > RCtime(19) and RCtime(20) and RCtime(21) and RCtime(22) and RCtime(23) and RCtime(24) and RCtime(26):
+    if sensor7 == np.max(photoVals):
+        print "SENSOR 7 ACTIVATED"
+        #LED Activation
         colorWipe(strip, Color(10, 190, 20))
-        print "\nSensor 7 ACTIVATED"
+        #Hue Lights Activation
+        l1 = b.lights[0]
+		l2 = b.lights[1]
+		l3 = b.lights[2]
+		l4 = b.lights[3]
 
-    if RCtime(26) > RCtime(19) and RCtime(20) and RCtime(21) and RCtime(22) and RCtime(23) and RCtime(24) and RCtime(25):
+		l1.xy = [0.5641, 0.4024]
+		l1.hue = 63206
+		l1.saturation = 253
+
+		l2.xy = [0.484, 0.2168]
+		l2.hue = 58621
+		l2.saturation = 253
+
+		l3.xy = [0.6255, 0.3578]
+		l3.hue = 4663
+		l3.saturation = 253
+
+		l4.xy = [0.1684, 0.0417]
+		l4.hue = 47126
+		l4.saturation = 253
+
+    if sensor8 == np.max(photoVals):
+        print "SENSOR 8 ACTIVATED"
+        #LED Activation
         colorWipe(strip, Color(75, 90, 40))
-        print "\nSensor 8 ACTIVATED"
-
-    # print "Sensor 1: {}".format(RCtime(19))   # Read RC timing using pin #18
-    # print "Sensor 2: {}".format(RCtime(20))
-    # print "Sensor 3: {}".format(RCtime(21))
-    # print "Sensor 4: {}".format(RCtime(22))
-    # print "Sensor 5: {}".format(RCtime(23))   # Read RC timing using pin #18
-    # print "Sensor 6: {}".format(RCtime(24))
-    # print "Sensor 7: {}".format(RCtime(25))
-    # print "Sensor 8: {}\n".format(RCtime(26))
-
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>END LIGHT COMMANDS>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 

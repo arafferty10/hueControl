@@ -1,5 +1,5 @@
 # Aidan Rafferty
-# Phillips Hue Python Test Code 2
+# Phillips Hue Python Test Code with Max Val Comparisson
 # Spring 2018
 
 #!/usr/bin/python
@@ -7,6 +7,7 @@
 # from phue import Bridge
 
 import time
+#Import LED controls
 from neopixel import *
 import argparse
 
