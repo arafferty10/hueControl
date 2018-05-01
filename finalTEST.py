@@ -147,6 +147,7 @@ while True:
     photoVals = np.append(photoVals, sensor7)
     sensor8 = RCtime(26)
     photoVals = np.append(photoVals, sensor8)
+    print photoVals
 
     #Compare photocell values to max value and trigger if they match
     if sensor1 == np.max(photoVals):
