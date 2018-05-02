@@ -157,6 +157,7 @@ while True:
         #LED Activation
         colorWipe(strip, Color(0, 0, 255))
         #Hue Lights Activation
+        b.set_group(1, 'on', True)
         lights = b.lights[0:4]
         for l in lights:
 			#Change colors
